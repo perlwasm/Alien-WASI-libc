@@ -37,6 +37,12 @@ sub sysroot
   Path::Tiny->new($class->dist_dir)->child('wasi-sysroot')->stringify;
 }
 
+sub _builtins
+{
+  my($class) = @_;
+  Path::Tiny->new($class->dist_dir)->child('lib/wasi/libclang_rt.builtins-wasm32.a')->stringify;
+}
+
 1;
 
 =head1 SEE ALSO
