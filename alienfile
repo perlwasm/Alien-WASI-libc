@@ -1,0 +1,23 @@
+use alienfile;
+
+probe sub { 'share' };
+
+meta->prop->{arch} = 0;
+
+share {
+
+  my $version = '10.0';
+
+  download [
+    "curl -OL https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-10/wasi-sysroot-$version.tar.gz",
+    "curl -OL https://github.com/WebAssembly/wasi-sdk/releases/download/wasi-sdk-10/libclang_rt.builtins-wasm32-wasi-$version.tar.gz",
+  ];
+
+  extract [
+    "tar xvf %{.install.download}/wasi-sysroot-$version.tar.gz",
+    "tar xvf %{.install.download}/libclang_rt.builtins-wasm32-wasi-$version.tar.gz",
+  ];
+
+  plugin 'Build::Copy';  
+
+};
