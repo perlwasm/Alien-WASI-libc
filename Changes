@@ -1,6 +1,7 @@
 Revision history for {{$dist->name}}},
 
 {{$NEXT}}
+  - Changed default branch for repository to `main`.
 
 0.01      2020-04-13 09:34:52 -0600
   - initial version
