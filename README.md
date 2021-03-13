@@ -1,4 +1,4 @@
-# Alien::WASI::libc [![Build Status](https://secure.travis-ci.org/perlwasm/Alien-WASI-libc.png)](http://travis-ci.org/perlwasm/Alien-WASI-libc)
+# Alien::WASI::libc ![linux](https://github.com/perlwasm/Alien-WASI-libc/workflows/linux/badge.svg)
 
 Alien to find or get libc for WASI 
 
