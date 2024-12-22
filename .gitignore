@@ -2,4 +2,7 @@ Alien-WASI-libc-*
 /.build/
 *.swp
 
-
+/Alien-WASI-libc-*
+/.build
+*.old
+*.orig
